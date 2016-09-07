@@ -1,7 +1,7 @@
 {
-  "name": "react-controlled-components",
+  "name": "react-forms-lab",
   "version": "0.1.0",
-  "description": "Introduction to controlled form elements in React",
+  "description": "Introduction to forms in React",
   "engines": {
     "node": "6.x",
     "npm": "3.x"
@@ -43,7 +43,8 @@
     "mocha": "^3.0.0",
     "mocha-multi": "^0.9.0",
     "node-inspector": "^0.12.8",
-    "react-addons-test-utils": "^15.3.0"
+    "react-addons-test-utils": "^15.3.0",
+    "sinon": "^1.17.5"
   },
   "dependencies": {
     "react": "^15.3.0",
