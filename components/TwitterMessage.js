@@ -1,6 +1,6 @@
-const React = require('react');
+import React from 'react';
 
-class TwitterMessage extends React.Component {
+export default class TwitterMessage extends React.Component {
   constructor() {
     super();
 
@@ -16,5 +16,3 @@ class TwitterMessage extends React.Component {
     );
   }
 }
-
-module.exports = TwitterMessage;

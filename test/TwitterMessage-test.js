@@ -1,7 +1,7 @@
-const React = require('react');
-const { shallow } = require('enzyme');
+import React from 'react';
+import { shallow } from 'enzyme';
 
-const TwitterMessage = require('../components/TwitterMessage');
+import TwitterMessage from '../components/TwitterMessage';
 
 describe('<TwitterMessage />', function () {
   describe('Saving input value in state', function () {

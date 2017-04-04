@@ -1,9 +1,9 @@
-const React = require('react');
-const sinon = require('sinon');
-const { shallow } = require('enzyme');
+import React from 'react';
+import sinon from 'sinon';
+import { shallow } from 'enzyme';
 
-const PoemWriter = require('../components/PoemWriter');
-const { isValueInState } = require('./util');
+import PoemWriter from '../components/PoemWriter';
+import { isValueInState }from './util';
 
 const INVALID_POEM = `${'word '.repeat(2)}
 ${'word '.repeat(5)}`;

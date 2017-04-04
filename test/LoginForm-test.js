@@ -1,9 +1,9 @@
-const React = require('react');
-const sinon = require('sinon');
-const { shallow } = require('enzyme');
+import React from 'react';
+import sinon from 'sinon';
+import { shallow } from 'enzyme';
 
-const LoginForm = require('../components/LoginForm');
-const { isValueInState, noop } = require('./util');
+import LoginForm from '../components/LoginForm';
+import { isValueInState, noop } from './util';
 
 describe('<LoginForm />', function () {
   const spy = sinon.spy();

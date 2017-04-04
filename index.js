@@ -1,9 +1,9 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const LoginForm = require('./components/LoginForm');
-const TwitterMessage = require('./components/TwitterMessage');
-const PoemWriter = require('./components/PoemWriter');
+import LoginForm from './components/LoginForm';
+import TwitterMessage from './components/TwitterMessage';
+import PoemWriter from './components/PoemWriter';
 
 function login({ username, password }) {
   console.log(`Logging in ${username} with password ${password}`);

@@ -1,6 +1,6 @@
-const React = require('react');
+import React from 'react';
 
-class PoemWriter extends React.Component {
+export default class PoemWriter extends React.Component {
   constructor() {
     super();
 
@@ -16,5 +16,3 @@ class PoemWriter extends React.Component {
     );
   }
 }
-
-module.exports = PoemWriter;
