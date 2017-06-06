@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class PoemWriter extends React.Component {
+class PoemWriter extends React.Component {
   constructor() {
     super();
 
@@ -10,9 +10,19 @@ export default class PoemWriter extends React.Component {
   render() {
     return (
       <div>
-        <textarea rows="3" cols="60" />
-        <div id="poem-validation-error" style={{color: 'red'}}>This poem is not written in the right structure!</div>
+        <textarea 
+          rows="3" 
+          cols="60" 
+        />
+        <div 
+          id="poem-validation-error" 
+          style={{color: 'red'}}
+        >
+          This poem is not written in the right structure!
+        </div>
       </div>
     );
   }
 }
+
+export default PoemWriter;
