@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class LoginForm extends React.Component {
+class LoginForm extends React.Component {
   constructor() {
     super();
 
@@ -29,3 +29,5 @@ export default class LoginForm extends React.Component {
     );
   }
 }
+
+export default LoginForm;
