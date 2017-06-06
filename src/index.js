@@ -20,7 +20,5 @@ ReactDOM.render(
     <h1><pre>PoemWriter</pre></h1>
     <PoemWriter />
   </div>,
-  document.getElementById('main')
+  document.getElementById('root')
 );
-
-require('./test/index-test.js'); // Leave this in!
