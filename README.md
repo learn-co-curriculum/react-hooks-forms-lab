@@ -52,6 +52,7 @@ General notes for this lab:
     - The second line has three words.
     - The third line has five words.
 5. Be sure to account for users accidentally adding too many spaces! This means that `' I am a furry dog '` is a valid first line of the poem.
+6. Make sure to account for if a user types in the textarea box, but deletes all of the content that the error message is still showing.
 
 ## Resources
 - [React Forms](https://facebook.github.io/react/docs/forms.html)
