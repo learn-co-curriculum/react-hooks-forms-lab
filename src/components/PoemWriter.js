@@ -10,12 +10,12 @@ class PoemWriter extends React.Component {
   render() {
     return (
       <div>
-        <textarea 
-          rows="3" 
-          cols="60" 
+        <textarea
+          rows="3"
+          cols="60"
         />
-        <div 
-          id="poem-validation-error" 
+        <div
+          id="poem-validation-error"
           style={{color: 'red'}}
         >
           This poem is not written in the right structure!

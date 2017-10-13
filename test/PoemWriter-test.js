@@ -1,10 +1,12 @@
 import React from 'react';
 import { expect } from 'chai';
 import sinon from 'sinon';
-import { shallow } from 'enzyme';
-
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import PoemWriter from '../src/components/PoemWriter';
 import { isValueInState }from './util';
+
+Enzyme.configure({ adapter: new Adapter() })
 
 const INVALID_POEM = `${'word '.repeat(2)}
 ${'word '.repeat(5)}`;
