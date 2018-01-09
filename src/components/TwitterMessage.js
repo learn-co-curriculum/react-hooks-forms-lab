@@ -6,15 +6,11 @@ class TwitterMessage extends React.Component {
   constructor() {
     super();
 
-    this.state = {
-      message: "",
-    };
+    this.state = { message: "" };
   }
 
   setMessage = event => {
-    this.setState({
-      message: event.target.value,
-    });
+    this.setState({ message: event.target.value });
   };
 
   render() {
