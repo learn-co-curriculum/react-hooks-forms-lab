@@ -45,10 +45,6 @@ General notes for this lab:
 
 ![Bo Burnham](https://media.giphy.com/media/dg2p49sffdtqo/giphy.gif)
 
-//
-the React component that renders a form also controls what happens in that form on subsequent user input. An input form element whose value is controlled by React in this way is called a “controlled component”.
-//
-
 1. Open the `components/PoemWriter.js` file.
 2. You'll find one `<textarea>` in this component. Make this a [controlled component](https://reactjs.org/docs/forms.html#controlled-components). Recall that controlled components in React render dynamically based on some piece of props or state. Its value should be saved in the components state.
 3. You'll also find an error element in the markup. This element should _only_ be shown if the poem is not valid.
@@ -57,10 +53,8 @@ the React component that renders a form also controls what happens in that form 
    * The first line has five words.
    * The second line has three words.
    * The third line has five words.
-     <!-- TODO: shouldn't this be invalid? -->
-5. Be sure to account for users accidentally adding too many spaces! This means that `' I am a furry dog '` is a valid first line of the poem.
-   <!-- TODO: wording here confusing AF -->
-6. Make sure to account for if a user types in the textarea box, but deletes all of the content that the error message is still showing.
+5. Be sure to account for users accidentally adding too many spaces! This means that `' I am a furry dog '` is not a valid first line of the poem.
+6. Make sure the error message is still showing if the user deletes all of their content from the textarea box
 
 ## Resources
 
