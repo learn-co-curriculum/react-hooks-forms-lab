@@ -1,23 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 class LoginForm extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      username: '',
-      password: '',
+      username: "",
+      password: "",
     };
   }
 
   handleInputChange = event => {
     const { name, value } = event.target;
-
+    console.log(name);
     this.setState({
-      [name]: value
+      [name]: value,
     });
-  }
+  };
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -28,7 +28,7 @@ class LoginForm extends React.Component {
     }
 
     this.props.onSubmit({ username, password });
-  }
+  };
 
   render() {
     return (
@@ -36,24 +36,24 @@ class LoginForm extends React.Component {
         <div>
           <label>
             Username
-            <input 
-              id="test-username" 
+            <input
+              id="test-username"
               type="text"
               name="username"
-              value={this.state.username} 
-              onChange={this.handleInputChange} 
+              value={this.state.username}
+              onChange={this.handleInputChange}
             />
           </label>
         </div>
         <div>
           <label>
             Password
-            <input 
-              id="test-password" 
-              type="password" 
+            <input
+              id="test-password"
+              type="password"
               name="password"
-              value={this.state.password} 
-              onChange={this.handleInputChange} 
+              value={this.state.password}
+              onChange={this.handleInputChange}
             />
           </label>
         </div>
