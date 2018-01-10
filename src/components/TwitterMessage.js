@@ -30,12 +30,10 @@ class TwitterMessage extends React.Component {
 
 TwitterMessage.propTypes = {
   maxChars: PropTypes.number,
-  //ensure maxChars is a number
 };
 
 TwitterMessage.defaultProps = {
   maxChars: 140,
 };
-//setting default props. read more about them here: https://reactjs.org/docs/typechecking-with-proptypes.html
 
 export default TwitterMessage;
