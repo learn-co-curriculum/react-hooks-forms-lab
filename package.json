@@ -6,9 +6,9 @@
     "jsdom": "^9.9.1",
     "mocha": "^3.2.0",
     "react-scripts": "^1.0.7",
-    "react-test-renderer": "^16.0.0",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "react-test-renderer": "^15.5.4",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
     "babel-core": "^6.22.1",
@@ -29,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "mocha -w test/helpers.js test/*.js",
-    "dev:hot": "webpack-dev-server --hot --inline --progress --colors --watch --display-error-details --display-cached --content-base ./",
+    "dev:hot":
+      "webpack-dev-server --hot --inline --progress --colors --watch --display-error-details --display-cached --content-base ./",
     "test:watch": "npm run test -- --watch",
     "eject": "react-scripts eject"
   }
