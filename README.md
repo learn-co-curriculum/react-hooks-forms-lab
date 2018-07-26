@@ -27,7 +27,8 @@ the tests run correctly.
 1. Open the `components/TwitterMessage.js` file.
 
 2. This component takes one prop: `maxChars` which is a number — the maximum
-amount of characters a message can have.
+amount of characters a message can have. This prop is being passed in from the
+App component with the value `140`.
 
 3. You'll find an `<input type="text">` in this component. Make this a
 controlled component by adding the attributes to the `<input>` element. Its
