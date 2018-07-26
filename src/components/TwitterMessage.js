@@ -28,6 +28,8 @@ class TwitterMessage extends React.Component {
   }
 }
 
+// dont worry if you've never seen these. propTypes just gives better error messages
+// defaultProps sets a value to a prop if it isn't otherwise provided
 TwitterMessage.propTypes = {
   maxChars: PropTypes.number,
 };

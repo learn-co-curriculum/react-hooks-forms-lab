@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import LoginForm from "./components/LoginForm";
 import TwitterMessage from "./components/TwitterMessage";
-import PoemWriter from "./components/PoemWriter";
+
 
 const login = ({ username, password }) => {
   console.log(`Logging in ${username} with password ${password}`);
@@ -21,10 +21,6 @@ ReactDOM.render(
     </h1>
     <LoginForm onSubmit={login} />
 
-    <h1>
-      <pre>PoemWriter</pre>
-    </h1>
-    <PoemWriter />
   </div>,
   document.getElementById("root")
 );
