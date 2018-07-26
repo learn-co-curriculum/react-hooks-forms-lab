@@ -50,8 +50,8 @@ functioning correctly when working in your browser.
 
 3. You'll find two inputs in this component: `<input type="text">` and `<input
 type="password">`. Make this a controlled component by adding the necessary
-props to these inputs. Their values should be saved in the component's state,
-again on every change.
+attributes to these inputs. The input values should be saved to the
+component's state, again on every change.
 
 4. An example of an input would look like:
 
