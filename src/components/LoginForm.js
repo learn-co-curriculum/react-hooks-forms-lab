@@ -13,13 +13,13 @@ class LoginForm extends React.Component {
         <div>
           <label>
             Username
-            <input id="test-username" type="text" />
+            <input id="username" name="username" type="text" />
           </label>
         </div>
         <div>
           <label>
             Password
-            <input id="test-password" type="password" />
+            <input id="password" name="password" type="password" />
           </label>
         </div>
         <div>
