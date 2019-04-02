@@ -52,23 +52,6 @@ describe("<LoginForm />", () => {
       ).to.be.true;
     });
 
-    it("should call the `onSubmit` callback prop when the form is being submitted", () => {
-      let spy = sinon.spy()
-      const wrapper = shallow(<LoginForm onSubmit={spy} />);
-      wrapper.find("#username").simulate("change", {
-        target: { name: "username", id: "username", value: "johndoe" },
-      });
-      wrapper.find("#password").simulate("change", {
-        target: {
-          name: "password",
-          id: "password",
-          value: "supersecret",
-        },
-      });
-      wrapper.find("form").simulate("submit", { preventDefault: spy });
-      expect(spy.called, "The `onSubmit` prop is not being called").to.be.true;
-    });
-
     it("should not call the `onSubmit` callback prop when the username and/or password fields are empty", () => {
       let spy = sinon.spy()
       const wrapper = shallow(<LoginForm onSubmit={spy} />);
@@ -115,7 +98,7 @@ describe("<LoginForm />", () => {
           value: "supersecret",
         },
       });
-      wrapper.find("form").simulate("submit", { preventDefault: spy });
+      wrapper.find("form").simulate("submit", { preventDefault: noop });
       expect(spy.called, "The `onSubmit` prop is not being called").to.be.true;
     });
   });
