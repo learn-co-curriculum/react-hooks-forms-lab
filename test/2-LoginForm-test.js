@@ -40,7 +40,7 @@ describe("<LoginForm />", () => {
     });
   });
 
-  describe("Calling `onSubmit` callback prop", () => {
+  describe("Calling `handleLogin` callback prop", () => {
     it("should call the prevent the default action when the form is being submitted", () => {
       let spy = sinon.spy()
       const wrapper = mount(<App />);
@@ -52,9 +52,9 @@ describe("<LoginForm />", () => {
       ).to.be.true;
     });
 
-    it("should not call the `onSubmit` callback prop when the username and/or password fields are empty", () => {
+    it("should not call the `handleLogin` callback prop when the username and/or password fields are empty", () => {
       let spy = sinon.spy()
-      const wrapper = shallow(<LoginForm onSubmit={spy} />);
+      const wrapper = shallow(<LoginForm handleLogin={spy} />);
 
       wrapper.find("#username").simulate("change", {
         target: { name: "username", id: "username", value: "" },
@@ -69,7 +69,7 @@ describe("<LoginForm />", () => {
       wrapper.find("form").simulate("submit", { preventDefault: noop });
       expect(
         spy.called,
-        "The `onSubmit` prop is being called with one or more empty form fields"
+        "The `handleLogin` prop is being called with one or more empty form fields"
       ).to.be.false;
 
       wrapper.find("#username").simulate("change", {
@@ -81,13 +81,13 @@ describe("<LoginForm />", () => {
       wrapper.find("form").simulate("submit", { preventDefault: noop });
       expect(
         spy.called,
-        "The `onSubmit` prop is being called with one or more empty form fields"
+        "The `handleLogin` prop is being called with one or more empty form fields"
       ).to.be.false;
     });
 
-    it("should call the `onSubmit` callback prop when the form is being submitted", () => {
+    it("should call the `handleLogin` callback prop when the form is being submitted", () => {
       let spy = sinon.spy()
-      const wrapper = shallow(<LoginForm onSubmit={spy} />);
+      const wrapper = shallow(<LoginForm handleLogin={spy} />);
       wrapper.find("#username").simulate("change", {
         target: { name: "username", id: "username", value: "johndoe" },
       });
@@ -99,7 +99,7 @@ describe("<LoginForm />", () => {
         },
       });
       wrapper.find("form").simulate("submit", { preventDefault: noop });
-      expect(spy.called, "The `onSubmit` prop is not being called").to.be.true;
+      expect(spy.called, "The `handleLogin` prop is not being called").to.be.true;
     });
   });
 });
