@@ -2,10 +2,10 @@ import React from "react";
 import { expect } from "chai";
 import sinon from "sinon";
 import { configure, shallow, mount } from "enzyme";
-import App from '../src/App'
+import App from "../src/App";
 import LoginForm from "../src/components/LoginForm";
 import { isValueInState, noop } from "./util";
-import Adapter from 'enzyme-adapter-react-16'
+import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() })
 
@@ -16,7 +16,7 @@ describe("<LoginForm />", () => {
       const wrapper = shallow(<LoginForm />);
 
       wrapper.find("#username").simulate("change", {
-        target: { name: "username", id: "username", value: "johndoe" },
+        target: { name: "username", id: "username", value: "johndoe" }
       });
       expect(
         isValueInState(wrapper.state(), "johndoe"),
@@ -31,7 +31,7 @@ describe("<LoginForm />", () => {
           name: "password",
           id: "password",
           value: "supersecret",
-        },
+        }
       });
       expect(
         isValueInState(wrapper.state(), "supersecret"),
@@ -57,14 +57,14 @@ describe("<LoginForm />", () => {
       const wrapper = shallow(<LoginForm handleLogin={spy} />);
 
       wrapper.find("#username").simulate("change", {
-        target: { name: "username", id: "username", value: "" },
+        target: { name: "username", id: "username", value: "" }
       });
       wrapper.find("#password").simulate("change", {
         target: {
           name: "password",
           id: "password",
           value: "supersecret",
-        },
+        }
       });
       wrapper.find("form").simulate("submit", { preventDefault: noop });
       expect(
@@ -73,10 +73,10 @@ describe("<LoginForm />", () => {
       ).to.be.false;
 
       wrapper.find("#username").simulate("change", {
-        target: { name: "username", id: "username", value: "johndoe" },
+        target: { name: "username", id: "username", value: "johndoe" }
       });
       wrapper.find("#password").simulate("change", {
-        target: { name: "password", id: "password", value: "" },
+        target: { name: "password", id: "password", value: "" }
       });
       wrapper.find("form").simulate("submit", { preventDefault: noop });
       expect(
@@ -89,14 +89,14 @@ describe("<LoginForm />", () => {
       let spy = sinon.spy()
       const wrapper = shallow(<LoginForm handleLogin={spy} />);
       wrapper.find("#username").simulate("change", {
-        target: { name: "username", id: "username", value: "johndoe" },
+        target: { name: "username", id: "username", value: "johndoe" }
       });
       wrapper.find("#password").simulate("change", {
         target: {
           name: "password",
           id: "password",
           value: "supersecret",
-        },
+        }
       });
       wrapper.find("form").simulate("submit", { preventDefault: noop });
       expect(spy.called, "The `handleLogin` prop is not being called").to.be.true;
