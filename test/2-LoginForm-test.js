@@ -5,12 +5,11 @@ import { configure, shallow, mount } from "enzyme";
 import App from "../src/App";
 import LoginForm from "../src/components/LoginForm";
 import { isValueInState, noop } from "./util";
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from "enzyme-adapter-react-16";
 
-configure({ adapter: new Adapter() })
+configure({ adapter: new Adapter() });
 
 describe("<LoginForm />", () => {
-
   describe("Saving input values in state", () => {
     it("should save the username in state when the input changes", () => {
       const wrapper = shallow(<LoginForm />);
@@ -30,7 +29,7 @@ describe("<LoginForm />", () => {
         target: {
           name: "password",
           id: "password",
-          value: "supersecret",
+          value: "supersecret"
         }
       });
       expect(
@@ -42,7 +41,7 @@ describe("<LoginForm />", () => {
 
   describe("Calling `handleLogin` callback prop", () => {
     it("should call the prevent the default action when the form is being submitted", () => {
-      let spy = sinon.spy()
+      let spy = sinon.spy();
       const wrapper = mount(<App />);
       wrapper.find("form").simulate("submit", { preventDefault: spy });
 
@@ -63,7 +62,7 @@ describe("<LoginForm />", () => {
         target: {
           name: "password",
           id: "password",
-          value: "supersecret",
+          value: "supersecret"
         }
       });
       wrapper.find("form").simulate("submit", { preventDefault: noop });
@@ -95,7 +94,7 @@ describe("<LoginForm />", () => {
         target: {
           name: "password",
           id: "password",
-          value: "supersecret",
+          value: "supersecret"
         }
       });
       wrapper.find("form").simulate("submit", { preventDefault: noop });
