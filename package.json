@@ -13,7 +13,7 @@
   "devDependencies": {
     "jsdom": "^9.9.1",
     "mocha": "^5.2.0",
-    "react-scripts": "^1.1.4",
+    "react-scripts": "^2.1.8",
     "react-test-renderer": "^15.5.4",
     "webpack": "^3.9.0",
     "webpack-dev-server": "^2.9.0"
@@ -25,7 +25,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.1.2",
-    "enzyme": "^3.3.0",
+    "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "mocha-multi": "^1.0.1",
     "react": "^16.4.1",
@@ -37,8 +37,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "mocha -w test/helpers.js test/*.js",
-    "dev:hot":
-      "webpack-dev-server --hot --inline --progress --colors --watch --display-error-details --display-cached --content-base ./",
+    "dev:hot": "webpack-dev-server --hot --inline --progress --colors --watch --display-error-details --display-cached --content-base ./",
     "test:watch": "npm run test -- --watch",
     "eject": "react-scripts eject"
   }
