@@ -43,7 +43,7 @@ is too long — you can let the counter reach negative values.
 
 1. Open the `components/LoginForm.js` file.
 
-2. This component takes one prop: `onSubmit` which is a function — this function
+2. This component takes one prop: `handleSubmit` which is a function — this function
 is called when the form is being submitted. By default, this function 
 currently just includes `console.log`. That will allow you to see if the form is
 functioning correctly when working in your browser.
