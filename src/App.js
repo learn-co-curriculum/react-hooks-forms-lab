@@ -20,7 +20,7 @@ class App extends Component {
         <h1>
           <pre>TwitterMessage</pre>
         </h1>
-        <TwitterMessage maxChars={140} />
+        <TwitterMessage maxChars={280} />
 
 
 
