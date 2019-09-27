@@ -28,7 +28,7 @@ the tests run correctly.
 
 2. This component takes one prop: `maxChars` which is a number — the maximum
 amount of characters a message can have. This prop is being passed in from the
-App component with the value `140`.
+App component with the value `280`.
 
 3. You'll find an `<input type="text">` in this component. Make this a
 controlled component by adding the attributes to the `<input>` element. Its
@@ -44,7 +44,7 @@ is too long — you can let the counter reach negative values.
 1. Open the `components/LoginForm.js` file.
 
 2. This component takes one prop: `handleSubmit` which is a function — this function
-is called when the form is being submitted. By default, this function 
+is called when the form is being submitted. By default, this function
 currently just includes `console.log`. That will allow you to see if the form is
 functioning correctly when working in your browser.
 
