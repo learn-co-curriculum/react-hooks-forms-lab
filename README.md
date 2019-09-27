@@ -73,6 +73,9 @@ component's state on every change.
 7. The `onSubmit` callback prop should only be called if _both_ fields are
 filled in (with any value).
 
+**Note**: In the starter code are `id` attributes - these are used in the
+tests, so make sure to leave them as they are.
+
 ## Resources
 
 * [React Forms](https://facebook.github.io/react/docs/forms.html)
