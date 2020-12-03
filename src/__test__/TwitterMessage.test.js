@@ -1,11 +1,12 @@
-import React from "react";
-import { expect } from "chai";
-import { configure, shallow } from "enzyme";
+import '@testing-library/jest-dom';
+import { expect } from 'chai';
+import React from 'react'
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
 
-import TwitterMessage from "../src/components/TwitterMessage";
-import Adapter from 'enzyme-adapter-react-16'
+import TwitterMessage from "../components/TwitterMessage";
 
-configure({ adapter: new Adapter() })
+Enzyme.configure({ adapter: new Adapter() })
 
 describe("<TwitterMessage />", () => {
   describe("Saving input value in state", () => {

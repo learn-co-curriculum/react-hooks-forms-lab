@@ -1,13 +1,16 @@
-import React from "react";
-import { expect } from "chai";
+import '@testing-library/jest-dom';
+import { expect } from 'chai';
 import sinon from "sinon";
-import { configure, shallow, mount } from "enzyme";
-import App from "../src/App";
-import LoginForm from "../src/components/LoginForm";
-import { isValueInState, noop } from "./util";
-import Adapter from "enzyme-adapter-react-16";
+import React from 'react'
+import Enzyme, { shallow, mount } from 'enzyme';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
 
-configure({ adapter: new Adapter() });
+import App from "../App";
+import LoginForm from "../components/LoginForm";
+
+Enzyme.configure({ adapter: new Adapter() })
+
+const noop = () => {}
 
 describe("<LoginForm />", () => {
   describe("Saving input values in state", () => {
