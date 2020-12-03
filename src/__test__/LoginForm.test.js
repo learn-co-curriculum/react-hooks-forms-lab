@@ -20,10 +20,7 @@ describe("<LoginForm />", () => {
       wrapper.find("#username").simulate("change", {
         target: { name: "username", id: "username", value: "johndoe" }
       });
-      expect(
-        isValueInState(wrapper.state(), "johndoe"),
-        "The username input value is not being saved in the state"
-      ).to.be.true;
+      expect(wrapper.find("#username").props().value).to.equal("johndoe");
     });
 
     it("should save the password in state when the input changes", () => {
@@ -35,10 +32,7 @@ describe("<LoginForm />", () => {
           value: "supersecret"
         }
       });
-      expect(
-        isValueInState(wrapper.state(), "supersecret"),
-        "The password input value is not being saved in the state"
-      ).to.be.true;
+      expect(wrapper.find("#password").props().value).to.equal("supersecret");
     });
   });
 
