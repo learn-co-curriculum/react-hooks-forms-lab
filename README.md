@@ -53,8 +53,10 @@ There is a new component called `ItemForm` that will allow us to add new items
 to our shopping list. _When the form is submitted_, a new item should be created
 and added to our list of items.
 
-1. Make all the input fields for this form controlled inputs, so that you
-   can access all the form data via state.
+1. Make all the input fields for this form controlled inputs, so that you can
+   access all the form data via state. When setting the initial state for the
+   `<select>` tag, use an initial value of "Produce" (since that's the first
+   option in the list).
 
 2. Handle the form's _submit_ event, and use the data that you have saved in
    state to create a new item object with the following properties:

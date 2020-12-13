@@ -56,23 +56,26 @@ function ItemForm({ onItemFormSubmit }) {
 // function AbstractedItemForm({ onItemFormSubmit }) {
 //   const [formData, setFormData] = useState({
 //     name: "",
-//     category: "Produce"
+//     category: "Produce",
 //   });
 
 //   function handleChange(event) {
 //     setFormData({
 //       ...formData,
-//       [event.target.name]: event.target.value
+//       [event.target.name]: event.target.value,
 //     });
 //   }
 
 //   function handleSubmit(event) {
-//     event.preventDefault()
-
+//     event.preventDefault();
+//     onItemFormSubmit({
+//       id: uuid(),
+//       ...formData
+//     });
 //   }
 
 //   return (
-//     <form className="NewItem">
+//     <form className="NewItem" onSubmit={handleSubmit}>
 //       <label>
 //         Name:
 //         <input
@@ -85,7 +88,11 @@ function ItemForm({ onItemFormSubmit }) {
 
 //       <label>
 //         Category:
-//         <select name="category" value={formData.category} onChange={handleChange}>
+//         <select
+//           name="category"
+//           value={formData.category}
+//           onChange={handleChange}
+//         >
 //           <option value="Produce">Produce</option>
 //           <option value="Dairy">Dairy</option>
 //           <option value="Dessert">Dessert</option>
