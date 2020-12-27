@@ -3,34 +3,6 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import ItemForm from "../components/ItemForm";
 import App from "../components/App";
 
-// test("the name input is a controlled input", () => {
-//   render(<ItemForm />);
-
-//   const nameInput = screen.queryByLabelText(/Name/);
-
-//   expect(nameInput.value).toBe("");
-
-//   fireEvent.change(nameInput, {
-//     target: { value: "Ice Cream" },
-//   });
-
-//   expect(nameInput.value).toBe("Ice Cream");
-// });
-
-// test("the category input is a controlled input", () => {
-//   render(<ItemForm />);
-
-//   const categoryInput = screen.queryByLabelText(/Category/);
-
-//   expect(categoryInput.value).toBe("Produce");
-
-//   fireEvent.change(categoryInput, {
-//     target: { value: "Dairy" },
-//   });
-
-//   expect(categoryInput.value).toBe("Dairy");
-// });
-
 test("calls the onItemFormSubmit callback prop when the form is submitted", () => {
   const onItemFormSubmit = jest.fn();
   render(<ItemForm onItemFormSubmit={onItemFormSubmit} />);
