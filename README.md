@@ -35,7 +35,7 @@ that only items whose name matches the text are included.
 
 - Once you've determined which component should hold the state for this feature,
   set up your initial state, and connect that state to the input field.
-  Remember, we're trying to make this input a _controlled_ input &mdash; so the
+  Remember, we're trying to make this input a _controlled_ input — so the
   input's value should always be in sync with state.
 
 - After you've connected the input to state, you'll also need to find a way to
