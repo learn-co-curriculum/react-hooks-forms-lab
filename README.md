@@ -46,10 +46,6 @@ that only items whose name matches the text are included.
   determine which items are being displayed on the page, similar to how the
   category dropdown works.
 
-**Note**: you may be asking yourself, why are we making this input controlled
-when the `<select>` element is not a controlled input? Well, the `<select>`
-input should probably be controlled as well! The tests don't require it, but
-feel free to update the `<select>` element to be a controlled element.
 
 ### ItemForm
 
