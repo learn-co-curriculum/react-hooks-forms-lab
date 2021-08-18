@@ -4,10 +4,10 @@
 
 - Implement a controlled form
 
-## Overview
+## Introduction
 
-In this lab, you'll write and use controlled components, and write
-validation for form components.
+In this lab, you'll write and use controlled components, and write validation
+for form components.
 
 ## Controlled Components
 
@@ -65,7 +65,7 @@ and added to our list of items.
 - Handle the form's _submit_ event, and use the data that you have saved in
   state to create a new item object with the following properties:
 
-  ```js
+  ```jsx
   const newItem = {
     id: uuid(), // the `uuid` library can be used to generate a unique id
     name: itemName,
@@ -79,7 +79,7 @@ and added to our list of items.
   **NOTE**: to add a new element to an array in state, it's a good idea to use
   the spread operator:
 
-  ```js
+  ```jsx
   function addElement(element) {
     setArray([...array, element]);
   }
