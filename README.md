@@ -6,8 +6,7 @@
 
 ## Introduction
 
-In this lab, you'll write and use controlled components, and write validation
-for form components.
+In this lab, you'll write and use controlled components.
 
 ## Controlled Components
 
@@ -28,7 +27,7 @@ passing data and callback functions as props, and working with events.
 
 In the filter component, there is a new input field for searching our list.
 _When the user types in this field_, the list of items should be filtered so
-that only items whose name matches the text are included.
+that only items with names that match the text are included.
 
 - Determine where you need to add state for this feature. What components need
   to know about the search text?
@@ -74,7 +73,8 @@ and added to our list of items.
   ```
 
 - Add the new item to the list by updating state. To get the test passing,
-  you'll need to use a prop called `onItemFormSubmit` as a callback.
+  you'll need to use a prop called `onItemFormSubmit` as a callback and pass the
+  new item to it.
 
   **NOTE**: to add a new element to an array in state, it's a good idea to use
   the spread operator:
